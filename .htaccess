@@ -1,0 +1,11 @@
+RewriteEngine on
+RewriteCond %{project} !-d
+RewriteCond %{project}\.html -f
+
+RewriteCond %{about} !-d
+RewriteCond %{about}\.html -f
+
+RewriteCond %{index} !-d
+RewriteCond %{index}\.html -f
+
+RewriteRule ^(.*)$ $1.html [NC,L]	
